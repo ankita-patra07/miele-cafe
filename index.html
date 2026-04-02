@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    <title>Miele Cafe</title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+        <h1>miele</h1>
+        <p class="tagline"><i>“Brewed with warmth, served with soul.”</i></p>
+        </header>
+        <div class="filters">
+            <button onclick="filterItems('All')"><b>All</b></button>
+            <button onclick="filterItems('Hot')"><b>Hot</b></button>
+            <button onclick="filterItems('Cold')"><b>Cold</b></button>
+            <button onclick="filterItems('Food')"><b>Food</b></button>
+        </div>
+
+        <h2 class="section-title">Menu</h2>
+        <div id="items-grid"></div>
+
+        <h2 class="section-title">Your Order</h2>
+        <div id="cart"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
