@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
-    <title>Miele Cafe</title>
+    <title>miele cafe</title>
 </head>
 <body>
-    <div class="app">
-        <header class="header">
-        <h1>miele</h1>
-        <p class="tagline"><i>“Brewed with warmth, served with soul.”</i></p>
-        </header>
-        <div class="filters">
-            <button onclick="filterItems('All')"><b>All</b></button>
-            <button onclick="filterItems('Hot')"><b>Hot</b></button>
-            <button onclick="filterItems('Cold')"><b>Cold</b></button>
-            <button onclick="filterItems('Food')"><b>Food</b></button>
+    <header>
+        <div class="offer">
+            FLAT 20% OFF | OFFER AUTOMATICALLY APPLIED ON CHECKOUT | *T&C APPLY
         </div>
 
-        <h2 class="section-title">Menu</h2>
-        <div id="items-grid"></div>
+        <div>
+            <h1 id="cafe-name">miele</h1>
+            <p id="desc"><i><b>"brewed with warmth, served with soul."</b></i></p>
+        </div>          
+    </header>
+    <main>
+    <div class="filternames">
+        <button class="btn">All</button>
+        <button class="btn">Hot</button>
+        <button class="btn">Cold</button>
+        <button class="btn">Food</button>
+    </div>
+    </main>
+    <div class="filters">
 
-        <h2 class="section-title">Your Order</h2>
-        <div id="cart"></div>
     </div>
     <script src="script.js"></script>
 </body>
