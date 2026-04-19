@@ -4,61 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Miele Cafe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Miele-Cafe</title>
 </head>
 <body>
     <header>
-        <div class="offer">
-            Fresh roasts every morning | Signature desserts after 6 PM
+    <div class="offerPanel">Fresh brewed blah blah blah</div>
+    <nav class="nav-bar">
+        <div class="logo">
+            <h1 id="logo">MieleCafe</h1>
         </div>
-        <nav id="navbar" aria-label="Main navigation">
-            <div id="logo">
-                <img src="miele-logo.png" alt="Miele Cafe logo">
-            </div>
         
-            <ul class="nav-links" id="primary-navigation">
-                <li id="menuTab"><a href="#menu">Menu</a></li>
-                <li><a href="#stories">Stories</a></li>
-                <li><a href="#visit">Visit</a></li>
-                <li><a href="#visit">Cart</a></li>
-                <li><a href="#visit">Contact Us</a></li>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">AboutUs</a>
+            <a href="#">ContactUs</a>
+        </div>
 
-            </ul>
-            <div class="social-links" aria-label="Social media links">
-                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-            <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
-        </nav>
+        <div class="btns">
+            <button id="sign-in">Sign In</button>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </nav>
     </header>
-    <main id="hero-content">
-        <section id="intro">
-            
-                <p class="tag">EST. 2026 • FRESHLY BREWED</p>
-                <h1>Your Neighbourhood Cafe</h1>
-                <p class="desc">A cozy corner where every cup tells a story.
-                    Freshly brewed coffee, warm bites, and moments that feel like home.</p>
-                <div class="btns">
-                    <button class="primary">Explore Menu</button>
-                    <button class="secondary">Visit Us</button>
-                </div>   
-        </section>
-        <section id="menu" >
-            <h2 style="font-size: 36px; font-weight: 700;margin-bottom: 30px; text-align: center;">Our Menu</h2>
-            <div class="menu-conatiner">
-                <button class="arrowLeft"><i class="fa-solid fa-arrow-left"></i></button>
-                <div id="menuItems"></div>
-                <button class="arrowRight"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-            
-        </section>
-    </main>
-    <script src="script.js"></script>
+    <section class="hero">
+        <div class="hero-content">
+           <h1>Take a, <br> Coffee Break</h1>
+        <p class="subtitle">Discover the art of perfect coffee</p>
+        <br>
+        <button>Explore Menu</button>
+        <button>Sign In</button> 
+        </div>
+    </section>
 </body>
 </html>
-        
