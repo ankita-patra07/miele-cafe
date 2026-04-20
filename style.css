@@ -85,7 +85,7 @@ header {
 }
 
 .btns button, .btns a {
-  padding: 6px 12px;
+  padding: 6px 15px;
   border-radius: 20px;
   cursor: pointer;
   border: none;
@@ -94,7 +94,7 @@ header {
   text-decoration: none;
   margin: 0;
   white-space: nowrap;
-  font-size:14px; 
+  font-size:12px; 
   position: relative;
   transition: 0.3s ease ;
 }
@@ -171,3 +171,133 @@ header {
   transition: 0.3s ease;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.hamburger i {
+  font-size: 24px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: rgba(212, 173, 165, 0.3);
+}
+
+.hamburger:hover i {
+  color: #f7edeb;
+}
+
+/*RESPONSIVENESS------*/
+
+@media(max-width: 1024px) {
+  .nav-bar {
+    width: 90%;
+  }
+}
+
+@media(max-width: 768px) {
+  .nav-bar {
+    width: 95%;
+    height: 55px;
+    padding: 10px 15px;
+  }
+
+  #logo h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(38, 12, 26, 0.98);
+    padding: 20px;
+    gap: 15px;
+    border-radius: 0;
+    z-index: 100;
+  }
+
+  .nav-links.active a {
+    padding: 10px;
+    border-bottom: 1px solid rgba(175, 141, 134, 0.2);
+  }
+
+  .btns {
+    gap: 10px;
+  }
+
+  .btns button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .hamburger {
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 480px) {
+  .nav-bar {
+    width: 98%;
+  }
+
+  #logo h1 {
+    font-size: 16px;
+  }
+
+  .btns button {
+    padding: 5px 8px;
+    font-size: 16px;
+  }
+
+  .hero-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content .subtitle {
+    font-size: 14px;
+  }
+
+  .hero-content button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
