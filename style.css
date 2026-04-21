@@ -347,3 +347,41 @@ header {
   font-weight:200;
 }
 
+.menu-section{
+  height:auto;
+  max-width: 200px;;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.menuCards{
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+.menuCards img{
+   width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.menuCards h3{
+   margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.menuCards p{
+  margin-bottom:12px;
+}
+
+.menuCards button{
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
