@@ -40,7 +40,7 @@ body::before{
 .offerPanel {
   color: white;
   text-align: center;
-  background-color: #9a7a73cb;
+  background-color: #9a7a738a;
   height: 30px;
   display: flex;
   justify-content: center;
@@ -61,18 +61,17 @@ header {
 }
 
 .nav-bar {
-  background-color: #9a7a7388;
+  background-color: #9a7a7305;
   margin-top:20px;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  border: 1px solid white;
+  border: 2px solid rgba(100, 97, 97, 0.5);
   width: 80%;
   border-radius: 20px;
-  gap:15px;
-  background-color: rgba(53, 17, 29, 0.274);   
+  gap:16px;
   backdrop-filter: blur(5px);
   
 }
@@ -179,10 +178,32 @@ header {
   font-weight:700 ;
 }
 
+.btn-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+#orderNow{
+  background-color: #af8d86ab;
+  color:rgb(236, 235, 230);
+}
+
+#exploreMenu{
+  background-color: rgb(228, 177, 82);
+  color:#260C1A;
+  
+}
+
 /*HOVER EFFECTS */
-.hero-content button:hover{
+#orderNow:hover{
   background-color: #ac847c;
 }
+
+#exploreMenu:hover{
+  background-color: rgb(241, 182, 94);
+  
+}
+
 .nav-links a:hover {
   color:#AF8D86;
   transform: scale(1.1);
