@@ -159,8 +159,42 @@ header {
   transition:all  0.3s ease ;
 }
 
-.hero {
+.btns button:hover,
+.btns a:hover {
+  background: rgba(175, 141, 134, 0.15);
+  border-color: var(--border-hover);
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
 
+.btns a i { font-size: 13px; }
+
+/* HAMBURGER */
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  padding: 7px 10px;
+  border-radius: 8px;
+  transition:all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.hamburger i {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.hamburger:hover {
+  background-color: rgba(212, 173, 165, 0.3);
+  border: var(--border-hover)
+}
+
+/* HERO */
+
+.hero {
   position: relative;
   overflow: hidden;
   /* background-image: url("Take\ a\,\ \(7\).png");
@@ -170,20 +204,26 @@ header {
   background-repeat: no-repeat; */
   min-height:100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  align-items:center;
+  margin-top: -80px;
 }
 
-.hero-content {
+/* .hero::before{
+ content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("Take a, (7).png");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4) saturate(0.7);
+  z-index: 0; 
+} */
 
-  max-width: 800px;
-  height: 100%;
-  padding-top: 0;
-  padding-left: 60px;
-  color: rgb(253, 253, 253);
-  text-align: left;
-  
+.hero-content {
+  max-width: 680px;
+  z-index:2;
+  padding: 0 80px;
+  position: relative;
 }
 
 .hero-content h1 {
@@ -262,30 +302,7 @@ header {
   transition: 0.3s ease;
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
 
-.hamburger i {
-  font-size: 24px;
-  color: white;
-  transition: 0.3s ease;
-}
-
-.hamburger:hover {
-  background-color: rgba(212, 173, 165, 0.3);
-}
-
-.hamburger:hover i {
-  color: #f7edeb;
-}
 
 /*RESPONSIVENESS------*/
 
