@@ -180,4 +180,26 @@ const categoryLabels = {
   "desserts": "desserts",
 }
 
-//
+// SINGLE CARD 
+
+function buildCard(item){
+  const tagHTML = item.tag
+    ? `<span class="menu-card-tag ${tagClass(item.tag)}">${item.tag}</span>`
+    : '';
+    
+    return `
+    <div class="menu-card">
+      <div class="menu-card-img-wrap">
+        <img class="menu-card-img" src="${item.image}" alt="${item.name}" loading="lazy">
+      </div>
+      <div class="menu-card-body">
+        ${tagHTML}
+        <div class="menu-card-name">${item.name}</div>
+        <div class="menu-card-desc">${item.description}</div>
+        <div class="menu-card-footer">
+          <div class="menu-card-price"><span>₹</span>${item.price}</div>
+          <button class="menu-card-add" aria-label="Add ${item.name}">+</button>
+        </div>
+      </div>
+    </div> `;
+}
