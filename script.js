@@ -180,7 +180,7 @@ const categoryLabels = {
   "desserts": "desserts",
 }
 
-// SINGLE CARD 
+// BUILDING SINGLE CARD 
 
 function buildCard(item){
   const tagHTML = item.tag
@@ -203,3 +203,32 @@ function buildCard(item){
       </div>
     </div> `;
 }
+
+// ── Render menu by active category ─────────────
+function renderMenu(activeCat) {
+  const container = document.getElementById('menuContainer');
+  const categories = activeCat === 'all'
+    ? ['coffee', 'non-coffee', 'food', 'desserts']
+    : [activeCat];
+
+  container.innerHTML = categories.map(cat => {
+    const items = menuItems.filter(i => i.category === cat);
+    if (!items.length) return '';
+    return `
+      <div class="menu-category">
+        <div class="category-title">${categoryLabels[cat]}</div>
+        <div class="menu-row">
+          ${items.map(buildCard).join('')}
+        </div>
+      </div>`;
+  }).join('');
+}
+
+// ── Tab switching ───────────────────────────────
+document.getElementById('menuTabs').addEventListener('click', e => {
+const tab = e.target.closest('.menu-tab');
+if (!tab) return;
+document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+tab.classList.add('active');
+renderMenu(tab.dataset.cat);
+});

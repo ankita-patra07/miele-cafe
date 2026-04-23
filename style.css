@@ -415,7 +415,7 @@ header {
 }
 
 .menu-tab:hover {
-  border-color: var(--border-hover);
+  border-color: var(--gold-dim);
   color: var(--text-main);
 }
 
@@ -427,10 +427,24 @@ header {
 }
 
 /* CATEGORY BLOCK */
+.menu-category{
+  margin-bottom: 60px;
+}
+
+.category-title {
+  font-family: 'Baskervville', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--rose-light);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
 
 
-/*RESPONSIVENESS------*/
 
+
+/* RESPONSIVENESS */
 @media(max-width: 1024px) {
   .nav-bar {
     width: 90%;
