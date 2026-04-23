@@ -42,7 +42,7 @@ html{
   color: var(--rose-light);
   border-bottom: 1px solid var(--border);
   text-align: center;
-  background-color: var(--maroon-soft);
+  background-color: var(--maroon-mid);
   height: 34px;
   display: flex;
   justify-content: center;
@@ -204,7 +204,7 @@ header {
 .hero {
   position: relative;
   overflow: hidden;
-  background-image: url("coffeeSplash.png");
+  background-image: linear-gradient(to right, rgba(29, 0, 8, 0.85) 50%, transparent),url("coffeeSplash.png");
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -215,16 +215,6 @@ header {
   margin-top: -80px;
 }
 
-/* .hero::before{
- content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("Take\ a\,\ \(Website\).png");
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.4) saturate(0.7);
-  z-index: 0; 
-} */
 
 .hero-content {
   max-width: 680px;
@@ -337,11 +327,11 @@ header {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(228, 177, 82, 0.35);
 }
-
+/*=========================================*/
 /* MENU */
 
 .Menu {
-  background-color: #695e48;
+  background-color: #1e0d10;
   padding: 100px 0 120px;
   position: relative;
   overflow: hidden;
@@ -357,7 +347,7 @@ header {
   z-index: 0;
 }
 
-.Menu-inner {
+.menu-inner {
   width: min(1200px, 92%);
   margin: 0 auto;
   position: relative;
@@ -369,7 +359,7 @@ header {
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -399,6 +389,45 @@ header {
   color: var(--text-muted);
   margin-bottom: 48px;
 }
+
+/* CATEGORY TABS */
+
+.menu-tabs{
+  display:flex;
+  gap:8px;
+  margin-bottom: 44px;
+  flex-wrap:wrap;
+}
+
+.menu-tab{
+  padding: 8px 22px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  white-space: nowrap;
+}
+
+.menu-tab:hover {
+  border-color: var(--border-hover);
+  color: var(--text-main);
+}
+
+.menu-tab.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--maroon-deep);
+  font-weight: 600;
+}
+
+/* CATEGORY BLOCK */
+
 
 /*RESPONSIVENESS------*/
 

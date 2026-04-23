@@ -1,14 +1,14 @@
 // Menu Items Data
 const menuItems = [
   // ─── COFFEE ───
-  {
+   {
     id: 1,
     category: "coffee",
     name: "Espresso",
     price: 120,
     description: "A concentrated shot of rich, dark coffee with a velvety crema.",
     tag: "bestseller",
-    image: "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&auto=format&fit=crop&q=60"
+    image : "https://images.unsplash.com/photo-1612509590595-785e974ed690?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXNwcmVzc28lMjBjb2ZmZWV8ZW58MHx8MHx8fDA%3D"
   },
   {
     id: 2,
@@ -171,20 +171,13 @@ const menuItems = [
   }
 ];
 
+// CATEGORY LABELS 
 
-const menuCards = document.querySelector(".menu-section");
+const categoryLabels = {
+  "coffee": "Coffee",
+  "tea&L": "Tea & Lattes",
+  "food": "Food",
+  "desserts": "desserts",
+}
 
-menuItems.forEach(function(item)
-{
-    menuCards.innerHTML += `
-    <div class="menu-card">
-        <img src= "${item.image}" alt="${item.name}">
-        <h3>${item.name}</h3>
-        <p>₹${item.price}</p>
-        <h4>${item.description}</h4>
-        <h5>${item.tag}</h5>
-        <button>Add to Cart</button>
-        </div>
-    `;
-
-});
+//
