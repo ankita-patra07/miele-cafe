@@ -44,7 +44,7 @@ const menuItems = [
     price: 185,
     description: "Espresso with generous steamed milk and a light foam top.",
     tag: null,
-    image: "https://images.unsplash.com/photo-1561882468-9110d70d2f9c?w=400&auto=format&fit=crop&q=60"
+    image: "https://images.unsplash.com/photo-1630021439100-74a32ab42d3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FmZSUyMGxhdHRlfGVufDB8fDB8fHww"
   },
 
   // ─── TEA & LATTES ───
@@ -93,7 +93,7 @@ const menuItems = [
     price: 280,
     description: "Smashed avo on sourdough with chilli flakes, lemon, and microgreens.",
     tag: "bestseller",
-    image: "https://images.unsplash.com/photo-1541519227354-08fa5d50c820?w=400&auto=format&fit=crop&q=60"
+    image: "https://plus.unsplash.com/premium_photo-1676106624038-81d1e17573db?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZvY2FkbyUyMHRvYXN0fGVufDB8fDB8fHww"
   },
   {
     id: 11,
@@ -180,18 +180,18 @@ function tagClass (tag){
 
 // BUILDING SINGLE CARD USING FUNCTIONS 
 
-function builCard(item){
+function buildCard(item){
   const tagHTML = item.tag ? `<span class="menu-card-tag ${tagClass(item.tag)}">${item.tag}</span>`: '';
 
   return `
   <div class="menu-card">
-    <div class ="menu-card-img-wrap>
+    <div class ="menu-card-img-wrap">
         <img class ="menu-card-img" src="${item.image}" alt ="${item.name}">
     </div>
-    <div class ="menu-card-body>
+    <div class ="menu-card-body">
       ${tagHTML}
-      <div class ="menu-card-name"> ${item.name}></div>
-      <div class ="menu-card-desc">${item.description}></div>
+      <div class ="menu-card-name">${item.name}</div>
+      <div class ="menu-card-desc">${item.description}</div>
       <div class ="menu-card-footer">
           <div class ="menu-card-price"><span>₹</span>${item.price}</div>
           <button class="menu-card-add">+</button>
@@ -201,5 +201,45 @@ function builCard(item){
 }
 
 //RENDER MENU BY ACTIVE CATEGORY
+function renderMenu(activeCat){
+  const container = document.getElementById("menuContainer");
+  const categories = activeCat === 'all' ? ['coffee','tea&L','food','desserts'] : [activeCat];
 
-const container = document.getElementById("menuContainer");
+  container.innerHTML = categories.map(cat => {
+   const items = menuItems.filter(i => i.category=== cat);
+    if (!items.length) return '';
+    return `
+      <div class="menu-category">
+        <div class="category-title">${categoryLabels[cat]}</div>
+        <div class="menu-row">
+          ${items.map(buildCard).join('')}
+        </div>
+      </div>`;
+
+}).join('');
+
+}
+
+// ── Tab switching ───────────────────────────────
+document.getElementById('menuTabs').addEventListener('click', e => {
+  const tab = e.target.closest('.menu-tab');
+  if (!tab) return;
+  document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  renderMenu(tab.dataset.cat);
+});
+
+// Initialize menu on page load
+renderMenu('all');
+
+//--- Hamburger------------------------------
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks  = document.getElementById('nav-links');
+
+hamburger.addEventListener('click',() => {
+const open = navLinks.classList.toggle('active');
+  hamburger.querySelector('i').className = open
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars';
+});
