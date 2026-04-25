@@ -162,80 +162,44 @@ const menuItems = [
   }
 ];
 
-// CATEGORY LABELS 
-
 const categoryLabels = {
   "coffee": "Coffee",
-  "tea&L": "Tea & Lattes",
-  "food": "Food",
-  "desserts": "Desserts",
-}
+  "tea&L" : "Tea and Lattes",
+  "food" : "Food",
+  "desserts" : "Desserts",
+};
 
-// ── Tag class mapping ───────────────────────────
-function tagClass(tag) {
-  if (!tag) return '';
+// TAG CLASS MAPPING 
+function tagClass (tag){
+  if(!tag) return  "";
   const tagMap = {
-    'new': 'tag-new',
-    'bestseller': 'tag-bestseller',
-    'seasonal': 'tag-seasonal',
-    'after 6pm': 'tag-afterpm',
-    'morning only': 'tag-morning'
+    'new': 'tag-new', 'bestseller': 'tag-bestseller', 'seasonal': 'tag-seasonal', 'after 6pm': 'tag-afterpm', 'morning only': 'tag-morning' 
   };
-  return tagMap[tag] || '';
+  return tagMap[tag] || "";
 }
 
-// BUILDING SINGLE CARD 
+// BUILDING SINGLE CARD USING FUNCTIONS 
 
-function buildCard(item){
-  const tagHTML = item.tag
-    ? `<span class="menu-card-tag ${tagClass(item.tag)}">${item.tag}</span>`
-    : '';
-    
-    return `
-    <div class="menu-card">
-      <div class="menu-card-img-wrap">
-        <img class="menu-card-img" src="${item.image}" alt="${item.name}" loading="lazy">
+function builCard(item){
+  const tagHTML = item.tag ? `<span class="menu-card-tag ${tagClass(item.tag)}">${item.tag}</span>`: '';
+
+  return `
+  <div class="menu-card">
+    <div class ="menu-card-img-wrap>
+        <img class ="menu-card-img" src="${item.image}" alt ="${item.name}">
+    </div>
+    <div class ="menu-card-body>
+      ${tagHTML}
+      <div class ="menu-card-name"> ${item.name}></div>
+      <div class ="menu-card-desc">${item.description}></div>
+      <div class ="menu-card-footer">
+          <div class ="menu-card-price"><span>₹</span>${item.price}</div>
+          <button class="menu-card-add">+</button>
       </div>
-      <div class="menu-card-body">
-        ${tagHTML}
-        <div class="menu-card-name">${item.name}</div>
-        <div class="menu-card-desc">${item.description}</div>
-        <div class="menu-card-footer">
-          <div class="menu-card-price"><span>₹</span>${item.price}</div>
-          <button class="menu-card-add" aria-label="Add ${item.name}">+</button>
-        </div>
-      </div>
-    </div> `;
+    </div>
+  </div>`;
 }
 
-// ── Render menu by active category ─────────────
-function renderMenu(activeCat) {
-  const container = document.getElementById('menuContainer');
-  const categories = activeCat === 'all'
-    ? ['coffee', 'tea&L', 'food', 'desserts']
-    : [activeCat];
+//RENDER MENU BY ACTIVE CATEGORY
 
-  container.innerHTML = categories.map(cat => {
-    const items = menuItems.filter(i => i.category === cat);
-    if (!items.length) return '';
-    return `
-      <div class="menu-category">
-        <div class="category-title">${categoryLabels[cat]}</div>
-        <div class="menu-row">
-          ${items.map(buildCard).join('')}
-        </div>
-      </div>`;
-  }).join('');
-}
-
-// ── Tab switching ───────────────────────────────
-document.getElementById('menuTabs').addEventListener('click', e => {
-const tab = e.target.closest('.menu-tab');
-if (!tab) return;
-document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
-tab.classList.add('active');
-renderMenu(tab.dataset.cat);
-});
-
-// ── Initialize menu on page load ─────────────────
-renderMenu('all');
+const container = document.getElementById("menuContainer");
