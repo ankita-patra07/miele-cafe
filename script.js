@@ -235,7 +235,7 @@ renderMenu('all');
 //--- Hamburger------------------------------
 
 const hamburger = document.querySelector('.hamburger');
-const navLinks  = document.getElementById('nav-links');
+const navLinks  = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click',() => {
 const open = navLinks.classList.toggle('active');
