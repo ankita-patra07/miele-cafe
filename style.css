@@ -562,6 +562,25 @@ header {
   background: var(--gold);
 }
 
+/* ABOUT US  */
+.about{
+  background-color: var(--maroon-deep);
+  padding: 100px 0 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before{
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, #1e0d10, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
 /* RESPONSIVENESS */
 @media(max-width: 1024px) {
   .nav-bar {
