@@ -46,20 +46,11 @@ const menuItems = [
     tag: null,
     image: "https://images.unsplash.com/photo-1561882468-9110d70d2f9c?w=400&auto=format&fit=crop&q=60"
   },
+
+  // ─── TEA & LATTES ───
   {
     id: 6,
-    category: "coffee",
-    name: "Affogato",
-    price: 230,
-    description: "A shot of hot espresso poured over a scoop of vanilla gelato.",
-    tag: "seasonal",
-    image: "https://images.unsplash.com/photo-1686140656878-a90bd1ab4b7f?w=400&auto=format&fit=crop&q=60"
-  },
-
-  // ─── NON-COFFEE ───
-  {
-    id: 7,
-    category: "non-coffee",
+    category: "tea&L",
     name: "Matcha Latte",
     price: 210,
     description: "Ceremonial grade matcha whisked with steamed oat milk.",
@@ -67,8 +58,8 @@ const menuItems = [
     image: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400&auto=format&fit=crop&q=60"
   },
   {
-    id: 8,
-    category: "non-coffee",
+    id: 7,
+    category: "tea&L",
     name: "Masala Chai",
     price: 160,
     description: "House-spiced tea brewed with ginger, cardamom, and full-fat milk.",
@@ -76,8 +67,8 @@ const menuItems = [
     image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&auto=format&fit=crop&q=60"
   },
   {
-    id: 9,
-    category: "non-coffee",
+    id: 8,
+    category: "tea&L",
     name: "Turmeric Latte",
     price: 195,
     description: "Golden milk with turmeric, black pepper, cinnamon, and honey.",
@@ -85,8 +76,8 @@ const menuItems = [
     image: "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&auto=format&fit=crop&q=60"
   },
   {
-    id: 10,
-    category: "non-coffee",
+    id: 9,
+    category: "tea&L",
     name: "Hot Chocolate",
     price: 175,
     description: "Dark Belgian couverture melted with steamed milk. Dense and rich.",
@@ -96,7 +87,7 @@ const menuItems = [
 
   // ─── FOOD ───
   {
-    id: 11,
+    id: 10,
     category: "food",
     name: "Avocado Toast",
     price: 280,
@@ -105,7 +96,7 @@ const menuItems = [
     image: "https://images.unsplash.com/photo-1541519227354-08fa5d50c820?w=400&auto=format&fit=crop&q=60"
   },
   {
-    id: 12,
+    id: 11,
     category: "food",
     name: "Eggs Benedict",
     price: 320,
@@ -114,7 +105,7 @@ const menuItems = [
     image: "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=400&auto=format&fit=crop&q=60"
   },
   {
-    id: 13,
+    id: 12,
     category: "food",
     name: "Grilled Panini",
     price: 260,
@@ -123,7 +114,7 @@ const menuItems = [
     image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&auto=format&fit=crop&q=60"
   },
   {
-    id: 14,
+    id: 13,
     category: "food",
     name: "Granola Bowl",
     price: 240,
@@ -134,7 +125,7 @@ const menuItems = [
 
   // ─── DESSERTS ───
   {
-    id: 15,
+    id: 14,
     category: "desserts",
     name: "Tiramisu",
     price: 220,
@@ -143,7 +134,7 @@ const menuItems = [
     image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&auto=format&fit=crop&q=60"
   },
   {
-    id: 16,
+    id: 15,
     category: "desserts",
     name: "Chocolate Lava Cake",
     price: 250,
@@ -152,7 +143,7 @@ const menuItems = [
     image: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=400&auto=format&fit=crop&q=60"
   },
   {
-    id: 17,
+    id: 16,
     category: "desserts",
     name: "Lemon Tart",
     price: 195,
@@ -161,7 +152,7 @@ const menuItems = [
     image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=400&auto=format&fit=crop&q=60"
   },
   {
-    id: 18,
+    id: 17,
     category: "desserts",
     name: "Croissant",
     price: 140,
@@ -177,7 +168,20 @@ const categoryLabels = {
   "coffee": "Coffee",
   "tea&L": "Tea & Lattes",
   "food": "Food",
-  "desserts": "desserts",
+  "desserts": "Desserts",
+}
+
+// ── Tag class mapping ───────────────────────────
+function tagClass(tag) {
+  if (!tag) return '';
+  const tagMap = {
+    'new': 'tag-new',
+    'bestseller': 'tag-bestseller',
+    'seasonal': 'tag-seasonal',
+    'after 6pm': 'tag-afterpm',
+    'morning only': 'tag-morning'
+  };
+  return tagMap[tag] || '';
 }
 
 // BUILDING SINGLE CARD 
@@ -208,7 +212,7 @@ function buildCard(item){
 function renderMenu(activeCat) {
   const container = document.getElementById('menuContainer');
   const categories = activeCat === 'all'
-    ? ['coffee', 'non-coffee', 'food', 'desserts']
+    ? ['coffee', 'tea&L', 'food', 'desserts']
     : [activeCat];
 
   container.innerHTML = categories.map(cat => {
@@ -232,3 +236,6 @@ document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active')
 tab.classList.add('active');
 renderMenu(tab.dataset.cat);
 });
+
+// ── Initialize menu on page load ─────────────────
+renderMenu('all');
