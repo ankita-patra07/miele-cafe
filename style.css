@@ -602,6 +602,38 @@ header {
   filter: brightness(0.8) saturate(0.85);
 }
 
+.about-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.about-text h2{
+  font-family: "Baskervville",serif;
+  font-weight:500;
+  font-size:44px;
+  margin-bottom : 24px;
+  line-height: 1.1;
+  color : var(--text-main)
+}
+
+.about-text h2 em{
+  color: var(--rose-pale);
+  font-style: italic;
+}
+
+.about-text p{
+  font-size: 14px;
+  font-weight: 300;
+  color : var(--text-muted);
+  line-height:1.85;
+  margin-bottom : 16px;
+}
+
 /* RESPONSIVENESS */
 @media(max-width: 1024px) {
   .nav-bar {
