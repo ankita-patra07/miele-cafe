@@ -785,6 +785,10 @@ header {
   box-shadow: 0 8px 24px rgba(228, 177, 82, 0.35);
 }
 
+.contact-inner::-webkit-scrollbar{
+  display:none;
+}
+
 /* Footer Section */
 footer{
   background-color: var(--maroon-deep);
