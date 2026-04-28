@@ -777,6 +777,7 @@ header {
   border-color: var(--border-hover);
   background-color: rgba(22, 0, 8, 0.85);
 }
+
                            
 .form-submit:hover{
   background: var(--gold);
