@@ -664,7 +664,7 @@ header {
   height : 100vh; 
   background-color: #1e0d10;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 100px 0 120px;
 }
 
@@ -751,7 +751,7 @@ header {
 }
 
 .form-submit{
-  background-color: var(--gold-dim);
+  background-color: var(--gold);
   padding: 13px 32px;
   color: var(--maroon-deep);
   border: none;
@@ -785,10 +785,6 @@ header {
   box-shadow: 0 8px 24px rgba(228, 177, 82, 0.35);
 }
 
-.contact-inner::-webkit-scrollbar{
-  display:none;
-}
-
 /* Footer Section */
 footer{
   background-color: var(--maroon-deep);
@@ -796,11 +792,52 @@ footer{
   border-top: 1px solid var(--border);
 }
 
+.footer-inner{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
 .footer-top{
   display:grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px;
   margin-bottom: 48px;
+}
+
+.footer-brand-name{
+  font-family: "Baskervville",serif;
+  font-size: 25px;
+  margin-bottom: 12px;
+  letter-spacing: 2.1px;
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+.footer-brand-desc{
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-faint);
+  line-height: 1.7;
+  max-width: 240px;
+}
+
+.footer-social{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.footer-social a{
+  text-decoration: none;
+  color: var(--text-faint);
+  width: 34px;
+  height: 34px;
+  font-size: 13px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
 }
 /* RESPONSIVENESS */
 @media(max-width: 1024px) {
