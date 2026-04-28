@@ -784,6 +784,11 @@ header {
   box-shadow: 0 8px 24px rgba(228, 177, 82, 0.35);
 }
 
+/* Footer Section */
+.footer-section{
+  background-color: var(--maroon-deep);
+  height: 100vh;
+}
 /* RESPONSIVENESS */
 @media(max-width: 1024px) {
   .nav-bar {
