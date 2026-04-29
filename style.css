@@ -839,6 +839,22 @@ footer{
   border: 1px solid var(--border);
   transition: all 0.2s ease;
 }
+
+.footer-social a:hover{
+  border-color: var(--border-hover);
+  color: var(--text-main);
+  background: rgba(175, 141, 134, 0.1);
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 12px;
+}
 /* RESPONSIVENESS */
 @media(max-width: 1024px) {
   .nav-bar {
