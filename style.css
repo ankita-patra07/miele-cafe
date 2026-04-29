@@ -204,9 +204,9 @@ header {
 .hero {
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(to right, rgba(29, 0, 8, 0.85) 50%, transparent),url("coffeeSplash.png");
+  background-image: linear-gradient(to right, rgba(29, 0, 8, 0.9) 40%, rgba(29, 0, 8, 0.5) 100%),url("coffeeSplash.png");
   background-size: cover;
-  background-position: center;
+  background-position: right center;
   background-attachment: scroll;
   background-repeat: no-repeat;
   min-height:100vh;
@@ -899,6 +899,9 @@ footer{
 /* RESPONSIVENESS */
 
 @media (max-width: 1024px) {
+  .hero-content { padding: 0 48px; }
+  .hero-content h1 { font-size: 60px; }
+  .hero-content .subtitle { font-size: 14px; max-width: 380px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
 
@@ -924,8 +927,16 @@ footer{
   .btns { display: none; }
   .hamburger { display: flex; align-items: center; justify-content: center; }
 
-  .hero-content { padding: 0 24px; }
-  .hero-content h1 { font-size: 44px; }
+  .hero { background-position: center right; min-height: 90vh; }
+  .hero-content { padding: 0 24px; max-width: 100%; }
+  .hero-est { font-size: 10px; letter-spacing: 2.5px; margin-bottom: 16px; }
+  .hero-est::before { width: 20px; }
+  .hero-content h1 { font-size: 48px; margin-bottom: 16px; }
+  .hero-content .subtitle { font-size: 14px; max-width: 350px; margin-bottom: 24px; line-height: 1.6; }
+  .hero-content button { padding: 10px 20px; font-size: 12px; }
+  #exploreMenu { padding: 11px 24px; }
+  #orderNow { padding: 10px 20px; }
+  .btn-group { gap: 12px; }
 
   .about-inner { grid-template-columns: 1fr; gap: 40px; }
   .about-img-wrap { max-width: 480px; margin: 0 auto; }
@@ -942,9 +953,18 @@ footer{
 }
 
 @media (max-width: 480px) {
-  .hero-content h1 { font-size: 34px; }
-  .btn-group { flex-direction: column; align-items: stretch; }
-  #exploreMenu, #orderNow { text-align: center; }
+  .hero { background-position: 70% center; background-size: 150% cover; min-height: 85vh; }
+  .hero-content { padding: 0 16px; max-width: 100%; }
+  .hero-est { font-size: 9px; letter-spacing: 2px; margin-bottom: 12px; }
+  .hero-est::before { width: 16px; }
+  .hero-content h1 { font-size: 32px; margin-bottom: 12px; line-height: 1.2; }
+  .hero-content .subtitle { font-size: 13px; max-width: 100%; margin-bottom: 20px; line-height: 1.5; }
+  .hero-content button { padding: 9px 18px; font-size: 11px; margin-right: 0; margin-top: 8px; }
+  #exploreMenu { padding: 10px 18px; }
+  #orderNow { padding: 9px 16px; }
+  .btn-group { flex-direction: column; align-items: stretch; gap: 10px; }
+  #exploreMenu, #orderNow { text-align: center; width: 100%; }
+  
   .about-stats { grid-template-columns: 1fr 1fr; }
   
   .contact { padding: 40px 0 60px; }
