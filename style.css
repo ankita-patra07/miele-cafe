@@ -661,10 +661,9 @@ header {
 /* CONTACT AND RESERVATION */
 
 .contact{
-  height : 100vh; 
+  min-height: 100vh; 
   background-color: #1e0d10;
   position: relative;
-  overflow: hidden;
   padding: 100px 0 120px;
 }
 
@@ -896,115 +895,67 @@ footer{
 }
 
 .footer-legal a:hover { color: var(--text-main); }
+
 /* RESPONSIVENESS */
-@media(max-width: 1024px) {
-  .nav-bar {
-    width: 90%;
-  }
+
+@media (max-width: 1024px) {
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
 
-@media(max-width: 768px) {
-
-  .nav-bar {
-    width: 95%;
-    height: 55px;
-    padding: 10px 15px;
-  }
-
-  #logo h1 {
-    font-size: 18px;
-    margin: 0;
-  }
-
+@media (max-width: 768px) {
   .nav-links {
     display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
     flex-direction: column;
     position: absolute;
-    top: 75px;
-    left: 20px;
-    right: 0;
-    width: 60%;
-    background-color: rgba(38, 12, 26, 0.98);
-    padding: 20px;
-    gap: 15px;
-    border-radius: 10px;
-    z-index: 100;
-    text-align:center;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(340px, 92vw);
+    background: rgba(22, 0, 8, 0.97);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    gap: 16px;
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-deep);
   }
 
-  .nav-links.active a {
-    padding: 10px;
-    border-bottom: 1px solid rgba(175, 141, 134, 0.2);
-  }
+  .nav-links.active { display: flex; }
+  .btns { display: none; }
+  .hamburger { display: flex; align-items: center; justify-content: center; }
 
+  .hero-content { padding: 0 24px; }
+  .hero-content h1 { font-size: 44px; }
 
-  .btns button{
-    display:none;
-  }
+  .about-inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-img-wrap { max-width: 480px; margin: 0 auto; }
+  .about-text h2 { font-size: 34px; }
+  .about-stats { grid-template-columns: repeat(3, 1fr); }
 
+  .contact { min-height: auto; padding: 60px 0 80px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 48px; width: min(100%, 92%); }
+  .contact-info h2 { font-size: 34px; }
+  .reservation-form { max-width: 100%; }
 
-  .hamburger {
-    display: flex !important;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .hero-content {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 40px;
-  }
-
-  .hero-content .subtitle {
-    font-size: 16px;
-  }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .Menu h1 { font-size: 38px; }
 }
 
-@media(max-width: 480px) {
-
-  .offerPanel{
-    height:30px;
-    font-size:8px;
-  }
-
-  .nav-bar {
-    width: 98%;
-  }
-
-  #logo h1 {
-    font-size: 16px;
-  }
-
-  .btns button {
-    padding: 5px 8px;
-    font-size: 16px;
-  }
-
-  .hero-content {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .hero-content h1 {
-    font-size: 28px;
-  }
-
-  .hero-content .subtitle {
-    font-size: 14px;
-  }
-
-  .hero-content button {
-    padding: 8px 15px;
-    font-size: 12px;
-  }
+@media (max-width: 480px) {
+  .hero-content h1 { font-size: 34px; }
+  .btn-group { flex-direction: column; align-items: stretch; }
+  #exploreMenu, #orderNow { text-align: center; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  
+  .contact { padding: 40px 0 60px; }
+  .contact-inner { gap: 32px; }
+  .contact-info h2 { font-size: 28px; }
+  .contact-detail { margin-bottom: 20px; }
+  .form-submit { align-self: stretch; text-align: center; }
+  
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .Menu h1 { font-size: 32px; }
 }
-
 
 
