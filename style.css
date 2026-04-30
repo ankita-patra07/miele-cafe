@@ -579,8 +579,8 @@ header {
   border-radius: 20px;
 }
 
-.sidePanel active {
-  right : 0;
+.sidePanel.active {
+  right : 10px;;
 }
 
 .cart-header {

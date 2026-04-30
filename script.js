@@ -283,8 +283,9 @@ const addTOCartbtn = document.querySelectorAll('.menu-card-add');
 addTOCartbtn.forEach(btn => {
   btn.addEventListener('click',function(){
     const card = this.closest('.menu-card');
-    const name = document.querySelector('.menu-card-name').textContent;
-    const price = document.querySelector('.menu-card-price').textContent;
+    const name = card.querySelector('.menu-card-name').textContent;
+    const priceText = card.querySelector('.menu-card-price').textContent;
+    const price = parseFloat(priceText.replace('₹', ''));
 
     const item = menuItems.find(i => i.name === name);
     const id = item.id;
@@ -309,7 +310,7 @@ function renderCart(){
         <p>${item.price} × ${item.quantity}</p>
       </div>
     ` ;
-    cartItemsContainer.innerHTML + itemHTML;
+    cartItemsContainer.innerHTML += itemHTML;
   });
 };
 
@@ -318,7 +319,7 @@ function renderCart(){
 function updateTotal(){
   let total = 0;
   cart.forEach(item => {
-    total += item.price * item.quantity
+    total += item.price * item.quantity;
   });
   document.querySelector('#totalPrice').textContent = total;
 };
@@ -326,6 +327,7 @@ function updateTotal(){
 //=======SIDEBAR==================
 
 function showSidePanel(){
+  console.log('showSidePanel called');
   document.querySelector('.sidePanel').classList.add('active');
 };
 
