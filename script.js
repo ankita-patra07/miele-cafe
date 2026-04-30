@@ -271,7 +271,10 @@ function addTOCart(product){
   else{
     cart.push(product);
   }
-  console.log('Cart', cart);
+   console.log('Cart after add:', cart);
+  renderCart();
+  updateTotal();
+  showSidePanel();
 };
 
 // ==========TAKE THE INFO FOR THE PRODUCT====================
@@ -313,5 +316,20 @@ function renderCart(){
 //======UPDATE TOTAL PRICE=============
 
 function updateTotal(){
-  
+  let total = 0;
+  cart.forEach(item => {
+    total += item.price * item.quantity
+  });
+  document.querySelector('#totalPrice').textContent = total;
 };
+
+//=======SIDEBAR==================
+
+function showSidePanel(){
+  document.querySelector('.sidePanel').classList.add('active');
+};
+
+//=====closebtn working===========
+document.querySelector('.close-btn').addEventListener('click',()=>{
+  document.querySelector('.sidePanel').classList.remove('active');
+});
