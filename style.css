@@ -178,7 +178,7 @@ header {
 
 /* HAMBURGER */
 
-.hamburger {
+.hamburger{
   display: none;
   background: transparent;
   border: 1px solid var(--border);
@@ -198,6 +198,7 @@ header {
   background-color: rgba(212, 173, 165, 0.3);
   border: var(--border-hover)
 }
+
 
 /* HERO */
 

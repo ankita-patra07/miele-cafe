@@ -184,7 +184,7 @@ function buildCard(item){
   const tagHTML = item.tag ? `<span class="menu-card-tag ${tagClass(item.tag)}">${item.tag}</span>`: '';
 
   return `
-  <div class="menu-card">
+  <div class ="menu-card">
     <div class ="menu-card-img-wrap">
         <img class ="menu-card-img" src="${item.image}" alt ="${item.name}">
     </div>
@@ -194,7 +194,7 @@ function buildCard(item){
       <div class ="menu-card-desc">${item.description}</div>
       <div class ="menu-card-footer">
           <div class ="menu-card-price"><span>₹</span>${item.price}</div>
-          <button class="menu-card-add">+</button>
+          <button class ="menu-card-add">+</button>
       </div>
     </div>
   </div>`;
@@ -243,3 +243,47 @@ const open = navLinks.classList.toggle('active');
     ? 'fa-solid fa-xmark'
     : 'fa-solid fa-bars';
 });
+
+// Close menu when a link is clicked
+navLinks.addEventListener('click', e => {
+  if (e.target.tagName === 'A') {
+    navLinks.classList.remove('active');
+    hamburger.querySelector('i').className = 'fa-solid fa-bars';
+  }
+});
+
+// ── Explore Menu button scrolls to #menu ───────
+document.getElementById('exploreMenu').addEventListener('click', () => {
+  document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
+});
+
+//---------ADD TO CART FUNCTIONALITY--------
+let cart = [];
+function addTOCart(product){
+  const existingItem = cart.find(item => item.id === product.id);
+
+  if(existingItem){
+    existingItem.quantity += 1;
+  }
+  else{
+    cart.push(product);
+  }
+  console.log('Cart',cart);
+}
+
+const addTOCartbtn = document.querySelectorAll('.menu-card-add');
+addTOCartbtn.forEach((btn) => {
+  btn.addEventListener('click',function(){
+    const card = this.closest('.menu-card');
+    const name = card.querySelector('.menu-card-name').textContent;
+    const price = card.querySelector('.menu-card-price').textContent;
+
+    const item = menuItems.find(i => i.name === name);
+    const id = item.id;
+
+    const product = { id, name, price, quantity: 1};
+
+    addTOCart(product);
+});
+});
+     
