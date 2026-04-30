@@ -80,12 +80,17 @@
 
         <!-- ADD TO CART SIDEBAR PANEL -->
             <div class="sidePanel">
-                <h3>Your Cart</h3>
-                <ol>Items-
-                    <li>Cappuccino</li>
-                </ol>
-                <h3>Total Price</h3>
-                <button>Place Order</button>
+                <div class="cart-header">
+                    <h3>Your Cart</h3>
+                    <button class ="close-btn">X</button>
+                </div>
+                <div class="cart-items">
+                    <!-- BY JS RENDERING -->
+                </div>
+                <div class="cart-footer">
+                    <div class="cart-total">Total: ₹<span id="totalPrice">0</span></div>
+                    <button class="checkout-btn">Place Order</button>
+                </div>
             </div>
 
         <!-- ABOUT -->
