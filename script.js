@@ -258,32 +258,36 @@ document.getElementById('exploreMenu').addEventListener('click', () => {
 });
 
 //---------ADD TO CART FUNCTIONALITY--------
+
+// WE NEED A CART TO STORE THE PRODUCT INFO
+
 let cart = [];
+
 function addTOCart(product){
   const existingItem = cart.find(item => item.id === product.id);
-
   if(existingItem){
     existingItem.quantity += 1;
   }
   else{
     cart.push(product);
   }
-  console.log('Cart',cart);
-}
+  console.log('Cart', cart);
+};
+
+// ==========TAKE THE INFO FOR THE PRODUCT====================
 
 const addTOCartbtn = document.querySelectorAll('.menu-card-add');
-addTOCartbtn.forEach((btn) => {
+addTOCartbtn.forEach(btn => {
   btn.addEventListener('click',function(){
     const card = this.closest('.menu-card');
-    const name = card.querySelector('.menu-card-name').textContent;
-    const price = card.querySelector('.menu-card-price').textContent;
+    const name = document.querySelector('.menu-card-name').textContent;
+    const price = document.querySelector('.menu-card-price').textContent;
 
     const item = menuItems.find(i => i.name === name);
     const id = item.id;
 
-    const product = { id, name, price, quantity: 1};
+    const product = {id, name, price, quantity: 1};
 
     addTOCart(product);
+  });
 });
-});
-     
