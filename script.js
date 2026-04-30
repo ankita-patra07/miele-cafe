@@ -291,3 +291,27 @@ addTOCartbtn.forEach(btn => {
     addTOCart(product);
   });
 });
+
+//=======RENDERING CART ITEMS ==========================
+
+function renderCart(){
+
+  const cartItemsContainer = document.querySelector('.cart-items');
+  cartItemsContainer.innerHTML = '';
+
+  cart.forEach(item =>{
+    const itemHTML = `
+      <div class="cart-item">
+        <h5>${item.name}</h5>
+        <p>${item.price} × ${item.quantity}</p>
+      </div>
+    ` ;
+    cartItemsContainer.innerHTML + itemHTML;
+  });
+};
+
+//======UPDATE TOTAL PRICE=============
+
+function updateTotal(){
+  
+};
