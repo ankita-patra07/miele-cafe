@@ -13,208 +13,207 @@
     <title>Miele-Cafe</title>
 </head>
 <body>
+     
     <div class="offerPanel">
         Fresh Roasts every morning • Signature Desserts after 6 pm
     </div>
     <header>
-    <nav class="nav-bar">
-        <div class="logo">
-            MieleCafe
-        </div>
-        
-        <div class="nav-links">
-            <a href="#hero">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#about">AboutUs</a>
-            <a href="#reservation">Reservation</a>
-        </div>
-        <!-- SIGN IN -->
-        <div class="btns">
-            <button id="sign-in">Sign In</button>
-        </div>
-        <!-- HAM AND SEARCH -->
-        <div class="nav-actions">
-            <a href="#" class="nav-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <button class="hamburger" id="hamburger">
-            <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
+        <nav class="nav-bar">
+            <div class="logo">
+                MieleCafe
+            </div>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">AboutUs</a>
+                <a href="#reservation">Reservation</a>
+            </div>
+            <!-- SIGN IN -->
+            <div class="btns">
+                <button id="sign-in">Sign In</button>
+            </div>
+            <!-- HAM AND SEARCH -->
+            <div class="nav-actions">
+                <a href="#" class="nav-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <button class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
     </header>
     <main>
-        <section class="hero" id="hero">
-            <div class="hero-content">
-                <p class="hero-est">EST 2026 DELHI</p>
-                <h1>Take a <em>Coffee</em> Break</h1>
-                <p class="subtitle">Discover the art of perfect coffee — freshly brewed, served warm, in a corner that feels like home.</p>
-                <div class="btn-group">
-                    <button id="exploreMenu">Explore Menu</button>
-                    <button id="orderNow">Order Now</button> 
-                </div>
+         <!-- ADD TO CART SIDEBAR PANEL -->
+        <div class="sidePanel">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class ="close-btn"><i class="fas fa-window-close"></i></button>
             </div>
-        </section>
+            <div class="cart-items">
+                    <!-- BY JS RENDERING -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">Total: ₹<span id="totalPrice">0</span></div>
+                <button class="checkout-btn">Place Order</button>
+            </div>
+        </div>
+        <div class ="main-content">
+            <section class="hero" id="hero">
+                <div class="hero-content">
+                    <p class="hero-est">EST 2026 DELHI</p>
+                    <h1>Take a <em>Coffee</em> Break</h1>
+                    <p class="subtitle">Discover the art of perfect coffee — freshly brewed, served warm, in a corner that feels like home.</p>
+                    <div class="btn-group">
+                        <button id="exploreMenu">Explore Menu</button>
+                        <button id="orderNow">Order Now</button> 
+                    </div>
+                </div>
+            </section>
 
         <!-- menu -->
 
-        <section class="Menu" id="menu">
-            <div class="menu-inner">
-                <p class="section-label">What we serve</p>
-                <h1>Our Menu</h1>
-                <p class="menu-subtitle">Crafted with care , served with warmth.</p>
-            
+            <section class="Menu" id="menu">
+                <div class="menu-inner">
+                    <p class="section-label">What we serve</p>
+                    <h1>Our Menu</h1>
+                    <p class="menu-subtitle">Crafted with care , served with warmth.</p>
+                
 
-            <!-- CATEGORY TABS -->
-             <div class="menu-tabs" id="menuTabs">
-                <button class="menu-tab active" data-cat="all">ALL</button>
-                <button class="menu-tab" data-cat="coffee">Coffee</button>
-                <button class="menu-tab" data-cat="tea&L">Tea & Lattes</button>
-                <button class="menu-tab" data-cat="food">Food</button>
-                <button class="menu-tab" data-cat="desserts">Desserts</button>
-             </div>
+                <!-- CATEGORY TABS -->
+                <div class="menu-tabs" id="menuTabs">
+                    <button class="menu-tab active" data-cat="all">ALL</button>
+                    <button class="menu-tab" data-cat="coffee">Coffee</button>
+                    <button class="menu-tab" data-cat="tea&L">Tea & Lattes</button>
+                    <button class="menu-tab" data-cat="food">Food</button>
+                    <button class="menu-tab" data-cat="desserts">Desserts</button>
+                </div>
 
-             <!-- categories by js -->
-             <div id="menuContainer"></div>
-             </div>
-        </section>
+                <!-- categories by js -->
+                <div id="menuContainer"></div>
+                </div>
+            </section>
 
-        <!-- ADD TO CART SIDEBAR PANEL -->
-            <div class="sidePanel active">
-                <div class="cart-header">
-                    <h3>Your Cart</h3>
-                    <button class ="close-btn"><i class="fas fa-window-close"></i></button>
-                </div>
-                <div class="cart-items">
-                    <!-- BY JS RENDERING -->
-                </div>
-                <div class="cart-footer">
-                    <div class="cart-total">Total: ₹<span id="totalPrice">0</span></div>
-                    <button class="checkout-btn">Place Order</button>
-                </div>
-            </div>
+        
 
         <!-- ABOUT -->
-         <section class="about" id="about">
-            <div class="about-inner">
-                <div class="about-img-wrap">
-                    <img class="about-img" src="https://plus.unsplash.com/premium_photo-1664970900025-1e3099ca757a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FmZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D" alt="Miele-Cafe">
-                </div>
-                <div class="about-text">
-                   <p class="section-label">Our story</p>
-                    <h2>A cafe born from <em>love</em></h2>
-                    <p>Miele was opened in 2026 with a single idea — that a great cup of coffee can make any day feel lighter. We source our beans directly from small farms and roast them fresh every morning.</p>
-                    <p>Every corner of this cafe is designed to slow you down. Stay a while. You deserve it.</p> 
-                    <div class="about-stats">
-                        <div>
-                            <div class="stat-num">18+</div>
-                            <div class="stat-label">Menu Items</div>
+            <section class="about" id="about">
+                <div class="about-inner">
+                    <div class="about-img-wrap">
+                        <img class="about-img" src="https://plus.unsplash.com/premium_photo-1664970900025-1e3099ca757a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FmZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D" alt="Miele-Cafe">
+                    </div>
+                    <div class="about-text">
+                        <p class="section-label">Our story</p>
+                            <h2>A cafe born from <em>love</em></h2>
+                            <p>Miele was opened in 2026 with a single idea — that a great cup of coffee can make any day feel lighter. We source our beans directly from small farms and roast them fresh every morning.</p>
+                            <p>Every corner of this cafe is designed to slow you down. Stay a while. You deserve it.</p> 
+                        <div class="about-stats">
+                            <div>
+                                <div class="stat-num">18+</div>
+                                <div class="stat-label">Menu Items</div>
+                            </div>
+                            <div>
+                                <div class="stat-num">4</div>
+                                <div class="stat-label">Bean origins</div>                 
+                            </div>
+                            <div>
+                                <div class="stat-num">∞</div>
+                                <div class="stat-label">Good mornings</div> 
+                            </div>
                         </div>
-                        <div>
-                            <div class="stat-num">4</div>
-                            <div class="stat-label">Bean origins</div> 
-                            
+                    </div>
+                </div>
+            </section>
+
+        <!-- RESERVATION/CONTACT PAGE  -->
+            <section class="contact" id="reservation">
+                <div class="contact-inner">
+                    <div class="contact-info">
+                        <p class="section-label">Find us</p>
+                        <h2>Come visit us</h2>
+                        <div class="contact-detail">
+                            <div class="contact-detail-label">Address</div>
+                            <p>12, Hauz Khas Village<br>New Delhi, 110016</p>
                         </div>
-                        <div>
-                            <div class="stat-num">∞</div>
-                            <div class="stat-label">Good mornings</div> 
+                        <div class="contact-detail">
+                            <div class="contact-detail-label">Hours</div>
+                            <p>Mon – Fri: 8 AM – 10 PM<br>Sat – Sun: 9 AM – 11 PM</p>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-label">Phone</div>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>    
+
+                    <!-- RESERVATION FORM -->
+                    <form class="reservation-form">
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="hello@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Reserve a table, ask about our menu..."></textarea>
+                    </div>
+                    <button type="button" class="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+        <!-- FOOTER -->
+
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <div class="footer-col">
+                        <div class="footer-brand-name">MieleCafe</div>
+                        <p class="footer-brand-desc">A cozy corner where every cup tells a story.</p>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                     </div>
-                </div>
-            </div>
-         </section>
-
-         <!-- RESERVATION/CONTACT PAGE  -->
-        <section class="contact" id="reservation">
-            <div class="contact-inner">
-                <div class="contact-info">
-                    <p class="section-label">Find us</p>
-                    <h2>Come visit us</h2>
-                    <div class="contact-detail">
-                        <div class="contact-detail-label">Address</div>
-                        <p>12, Hauz Khas Village<br>New Delhi, 110016</p>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Navigate</div>
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
                     </div>
-                    <div class="contact-detail">
-                        <div class="contact-detail-label">Hours</div>
-                        <p>Mon – Fri: 8 AM – 10 PM<br>Sat – Sun: 9 AM – 11 PM</p>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Menu</div>
+                        <ul>
+                            <li><a href="#menu">Coffee</a></li>
+                            <li><a href="#menu">Tea and Lattes</a></li>
+                            <li><a href="#menu">Food</a></li>
+                            <li><a href="#menu">Desserts</a></li>
+                        </ul>
                     </div>
-                    <div class="contact-detail">
-                        <div class="contact-detail-label">Phone</div>
-                        <p>+91 98765 43210</p>
-                    </div>
-                </div>    
-            
-                <!-- RESERVATION FORM -->
-                <form class="reservation-form">
-                <div class="form-group">
-                    <label for="name">Your name</label>
-                    <input type="text" id="name" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="hello@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="4" placeholder="Reserve a table, ask about our menu..."></textarea>
-                </div>
-                <button type="button" class="form-submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-top">
-                <div class="footer-col">
-                    <div class="footer-brand-name">MieleCafe</div>
-                    <p class="footer-brand-desc">A cozy corner where every cup tells a story.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Legal</div>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <div class="footer-col-title">Navigate</div>
-                    <ul>
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <div class="footer-col-title">Menu</div>
-                    <ul>
-                        <li><a href="#menu">Coffee</a></li>
-                        <li><a href="#menu">Tea and Lattes</a></li>
-                        <li><a href="#menu">Food</a></li>
-                        <li><a href="#menu">Desserts</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <div class="footer-col-title">Legal</div>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                    </ul>
+                <div class="footer-bottom">
+                    <span class="footer-copy">© 2026 MieleCafe. All rights reserved.</span>
+                    <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <span class="footer-copy">© 2026 MieleCafe. All rights reserved.</span>
-                <div class="footer-legal">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+        </footer>
     
-    </main>
+
     <script src="script.js"></script>
 </body>
 </html>

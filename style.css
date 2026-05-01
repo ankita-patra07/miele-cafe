@@ -563,24 +563,62 @@ header {
   background: var(--gold);
 }
 
+/* CHANGING STRUCTURE OF MAIN FOR SIDEPANEL */
+main{
+  display:flex;
+  flex:1;
+}
+
+.main-content{
+  flex:1;
+  transition: margin-right 0.3s ease ;
+}
+
+.main-content.sidebar-open,.offerPanel.sidebar-open,
+header.sidebar-open,footer.sidebar-open {
+  margin-right: 400px;
+}
+
+body{
+  display:flex;
+  flex-direction: column;
+}
+
+.offerPanel {
+  flex-shrink: 0;
+  transition: margin-right 0.3s ease;
+}
+
+header {
+  flex-shrink: 0;
+  transition: margin-right 0.3s ease;
+}
+
+footer{
+  flex-shrink: 0;
+  transition: margin-right 0.3s ease;
+}
+
 /* =========ADD TO CART SIDEPANEL ========*/
 
 .sidePanel{
   display: flex;
   flex-direction: column;
+  flex-shrink : 0;
   position: fixed;
-  right: -400px;
-  top: 50px;
+  right: 0;
+  top: 35px;
   width: 400px;
   height: 80vh;
   z-index: 1000;
-  background-color: var(--maroon-deep);
-  transition: right 0.3s ease;
+  background-color: #160008;
+  transition: right 0.5s ease;
+  transform: translateX(400px);
   border-radius: 20px;
 }
 
 .sidePanel.active {
-  right : 10px;;
+  transform: translateX(0);
 }
 
 .cart-header {

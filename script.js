@@ -327,11 +327,28 @@ function updateTotal(){
 //=======SIDEBAR==================
 
 function showSidePanel(){
-  console.log('showSidePanel called');
-  document.querySelector('.sidePanel').classList.add('active');
+  const sidebar = document.querySelector('.sidePanel');
+  const mainContent = document.querySelector('.main-content');
+  sidebar.classList.add('active');
+  mainContent.classList.add('sidebar-open');
+  document.querySelector('.offerPanel').classList.add('sidebar-open');
+  document.querySelector('header').classList.add('sidebar-open');
+  document.querySelector('footer').classList.add('sidebar-open');
+
 };
 
 //=====closebtn working===========
 document.querySelector('.close-btn').addEventListener('click',()=>{
   document.querySelector('.sidePanel').classList.remove('active');
+  document.querySelector('.main-content').classList.remove('sidebar-open');
+  document.querySelector('.offerPanel').classList.remove('sidebar-open');
+  document.querySelector('header').classList.remove('sidebar-open');
+  document.querySelector('footer').classList.remove('sidebar-open');
+});
+
+//========SIGN IN FORM======================
+
+const signInbtn = document.querySelector('#sign-in');
+signInbtn.addEventListener('click',()=>{
+  
 });
