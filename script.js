@@ -306,7 +306,7 @@ function renderCart(){
     const itemHTML = `
       <div class="cart-item">
         <h5>${item.name}</h5>
-        <p>${item.price}</p>
+        <p>₹${item.price}</p>
         <div class="qty-control">
           <button class="qty-minus" data-id="${item.id}">−</button>
           <span class="qty-display">${item.quantity}</span>
