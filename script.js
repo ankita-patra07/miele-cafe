@@ -315,6 +315,33 @@ function renderCart(){
     ` ;
     cartItemsContainer.innerHTML += itemHTML;
   });
+  document.querySelectorAll('.qty-plus').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const id = parseInt(this.dataset.id);
+      const item = cart.find(i => i.id === id);
+      if (item) {
+        item.quantity += 1;
+        renderCart();
+        updateTotal();
+      }
+    });
+  });
+
+  document.querySelectorAll('.qty-minus').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const id = parseInt(this.dataset.id);
+      const item = cart.find(i => i.id === id);
+      if (item) {
+        if (item.quantity > 1) {
+          item.quantity -= 1;
+        } else {
+          cart = cart.filter(i => i.id !== id);
+        }
+        renderCart();
+        updateTotal();
+      }
+    });
+  });
 };
 
 //======UPDATE TOTAL PRICE=============
