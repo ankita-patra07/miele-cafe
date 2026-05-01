@@ -271,7 +271,6 @@ function addTOCart(product){
   else{
     cart.push(product);
   }
-   console.log('Cart after add:', cart);
   renderCart();
   updateTotal();
   showSidePanel();
@@ -307,8 +306,12 @@ function renderCart(){
     const itemHTML = `
       <div class="cart-item">
         <h5>${item.name}</h5>
-        <p>${item.price} × ${item.quantity}</p>
-      </div>
+        <p>${item.price}</p>
+        <div class="qty-control">
+          <button class="qty-minus" data-id="${item.id}">−</button>
+          <span class="qty-display">${item.quantity}</span>
+          <button class="qty-plus" data-id="${item.id}">+</button>
+       </div>
     ` ;
     cartItemsContainer.innerHTML += itemHTML;
   });

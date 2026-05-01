@@ -611,10 +611,8 @@ footer{
   width: 400px;
   height: 80vh;
   z-index: 1000;
-  background-color: #160008;
   transition: right 0.5s ease;
   transform: translateX(400px);
-  border-radius: 20px;
 }
 
 .sidePanel.active {
