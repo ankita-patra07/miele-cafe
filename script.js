@@ -379,10 +379,13 @@ document.querySelector('.close-btn').addEventListener('click',()=>{
 //=============BOOK A TABLE===================
 const dialog = document.getElementById('bookTable');
 document.querySelector('.form-submit').onclick = () => {
-  dialog.showModal();
-  // Auto-close dialog after 3 seconds (3000 milliseconds)
+  // Wait 0.5 seconds (500 milliseconds) before showing dialog
   setTimeout(() => {
-    dialog.close();
-  }, 3000);
+    dialog.showModal();
+    // Auto-close dialog after 3 seconds (3000 milliseconds)
+    setTimeout(() => {
+      dialog.close();
+    }, 3000);
+  }, 500);
 };
 document.getElementById('closeBtn').onclick = () => dialog.close();
