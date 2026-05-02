@@ -962,7 +962,7 @@ footer{
 
 /* DIALOG BOX */
 dialog {
-  background-color: #1a0f0f;
+  background-color: var(--maroon-deep);
   border: 1px solid var(--border-hover);
   border-radius: 12px;
   padding: 32px;
@@ -985,7 +985,7 @@ dialog h5 {
   font-size: 20px;
   font-weight: 600;
   margin: 0 0 12px 0;
-  color: var(--gold);
+  color: white;
   letter-spacing: 0.5px;
 }
 
@@ -997,8 +997,8 @@ dialog p {
 }
 
 dialog button {
-  background-color:rgb(224, 19, 19);
-  color: white;
+  background-color:var(--gold);
+  color: var(--maroon-mid);
   border: none;
   border-radius: 4px;
   padding: 10px 24px;
@@ -1008,16 +1008,15 @@ dialog button {
   text-transform: uppercase;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   width: auto;
   margin-left: auto;
   display: block;
 }
 
 dialog button:hover {
-  background-color: #f0c060;
+  background-color: var(--gold-dim);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(228, 177, 82, 0.35);
 }
 
 /* Footer Section */
