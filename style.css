@@ -880,6 +880,10 @@ footer{
   gap: 6px;
 }
 
+.form-group:has(select) {
+  grid-column: 1 / -1;
+}
+
 .form-group label{
   font-size: 10px;
   letter-spacing: 1.5px;
@@ -922,7 +926,7 @@ footer{
 }
 .form-submit{
   background-color: var(--gold);
-  padding: 11px 26px;
+  padding: 13px 32px;
   color: var(--maroon-deep);
   border: none;
   border-radius: 4px;
