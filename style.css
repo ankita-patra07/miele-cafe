@@ -289,7 +289,7 @@ header {
   align-items: center;
 }
 #orderNow{
-  padding: 12px 30px;
+  padding: 10px 20px;
   background: transparent;
   color:var(--text-main);
   border: 1px solid var(--border-hover);
@@ -304,7 +304,7 @@ header {
 }
 
 #exploreMenu{
-  padding: 13px 30px;
+  padding: 11px 24px;
   background: var(--gold);
   color:var(--maroon-deep);
   border: none;
@@ -919,7 +919,7 @@ footer{
 }
 .form-submit{
   background-color: var(--gold);
-  padding: 13px 32px;
+  padding: 11px 26px;
   color: var(--maroon-deep);
   border: none;
   border-radius: 4px;
