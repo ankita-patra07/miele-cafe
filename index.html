@@ -156,8 +156,12 @@
                     <div class="form-group">
                         <label for="number">Phone</label>
                         <input type="number" id="number" placeholder="91XXXXXXX">
+                    </div>
+                    <div class="form-group">
                         <label for="date">Date</label>
                         <input type="date" id="date">
+                    </div>
+                    <div class="form-group">
                         <label for="time" id="time">Time</label>
                         <select>
                             <option disabled selected>Time</option>
@@ -176,9 +180,14 @@
                             <option>11:30 PM</option>
                         </select>
                     </div>
+                    
                     <div class="form-group">
-                        <input type="number" min="0" placeholder="Male">
-                        <input type="number" min="0" placeholder="Female">
+                        <label for="guests-male">Male Guests</label>
+                        <input type="number" id="guests-male" min="0" placeholder="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests-female">Female Guests</label>
+                        <input type="number" id="guests-female" min="0" placeholder="0">
                     </div>
                     <button type="button" class="form-submit">Book a Table</button>
                     </form>

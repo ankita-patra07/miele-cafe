@@ -913,8 +913,9 @@ footer{
   transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-#date{
+ #date #number{
   color: var(--text-faint);
+  display:inline-block;
 }
 .form-submit{
   background-color: var(--gold);
@@ -930,6 +931,8 @@ footer{
   cursor: pointer;
   margin-top: 6px;
   transition: all 0.2s ease;
+  grid-column: 1 / -1;
+  align-self: flex-start;
 }
 
 .form-group input::placeholder{
