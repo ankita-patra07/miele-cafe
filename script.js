@@ -376,9 +376,7 @@ document.querySelector('.close-btn').addEventListener('click',()=>{
   document.querySelector('footer').classList.remove('sidebar-open');
 });
 
-//========SIGN IN FORM======================
-
-const signInbtn = document.querySelector('#sign-in');
-signInbtn.addEventListener('click',()=>{
-  
-});
+//=============BOOK A TABLE===================
+const dialog = document.getElementById('bookTable');
+document.querySelector('.form-submit').onclick = () => dialog.showModal();
+document.getElementById('closeBtn').onclick = () => dialog.close();
