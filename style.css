@@ -609,10 +609,11 @@ footer{
   right: 0;
   top: 35px;
   width: 390px;
-  height: 80vh;
+  height: 100vh;
   z-index: 1000;
   transition: right 0.5s ease;
   transform: translateX(400px);
+  overflow-y:auto;
 }
 
 .sidePanel.active {
@@ -644,7 +645,7 @@ footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10px;
+  padding: 15px 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   flex: 1;
   overflow-y: auto;
@@ -652,7 +653,7 @@ footer{
 }
 
 .cart-item p{
-  padding: 20px;
+  padding: 10px;
 }
 
 .cart-item h5{
@@ -804,7 +805,7 @@ footer{
   font-size: 13px;
   letter-spacing: 1px;
   color: var(--text-faint);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* CONTACT AND RESERVATION */
@@ -866,8 +867,8 @@ footer{
 
 /* RESERVATION FORM */
 .reservation-form{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap:16px;
 }
 .form-group{
@@ -884,7 +885,7 @@ footer{
   font-weight: 400;
 }
 
-.form-group input, .form-group textarea {
+.form-group input{
   background-color: rgba(22,0,8,0.6);
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -898,6 +899,23 @@ footer{
   transition: border-color 0.2s ease, background 0.2s ease;
 }
 
+.form-group select{
+  background-color: rgba(22,0,8,0.6);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding:12px;
+  color: var(--text-faint);
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  outline: none;
+  resize: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+#date{
+  color: var(--text-faint);
+}
 .form-submit{
   background-color: var(--gold);
   padding: 13px 32px;
@@ -910,18 +928,16 @@ footer{
   letter-spacing: 1.5px;
   text-transform: uppercase;
   cursor: pointer;
-  align-self: flex-start;
   margin-top: 6px;
   transition: all 0.2s ease;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
+.form-group input::placeholder{
   color: var(--text-faint);
 }
 
 .form-group input:focus,
- .form-group textarea:focus{
+ .form-group select:focus{
   border-color: var(--border-hover);
   background-color: rgba(22, 0, 8, 0.85);
 }

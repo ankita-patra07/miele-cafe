@@ -154,10 +154,33 @@
                         <input type="email" id="email" placeholder="hello@example.com">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="4" placeholder="Reserve a table, ask about our menu..."></textarea>
+                        <label for="number">Phone</label>
+                        <input type="number" id="number" placeholder="91XXXXXXX">
+                        <label for="date">Date</label>
+                        <input type="date" id="date">
+                        <label for="time" id="time">Time</label>
+                        <select>
+                            <option disabled selected>Time</option>
+                            <option>12:00 PM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                            <option>5:00 PM</option>
+                            <option>6:00 PM</option>
+                            <option>7:00 PM</option>
+                            <option>8:00 PM</option>
+                            <option>9:00 PM</option>
+                            <option>10:00 PM</option>
+                            <option>11:00 PM</option>
+                            <option>11:30 PM</option>
+                        </select>
                     </div>
-                    <button type="button" class="form-submit">Send Message</button>
+                    <div class="form-group">
+                        <input type="number" min="0" placeholder="Male">
+                        <input type="number" min="0" placeholder="Female">
+                    </div>
+                    <button type="button" class="form-submit">Book a Table</button>
                     </form>
                 </div>
             </section>
