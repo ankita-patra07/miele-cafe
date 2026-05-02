@@ -287,9 +287,11 @@ header {
   display: flex;
   gap: 14px;
   align-items: center;
+  justify-content: center;
 }
 #orderNow{
   padding: 10px 20px;
+  min-width: 140px;
   background: transparent;
   color:var(--text-main);
   border: 1px solid var(--border-hover);
@@ -305,6 +307,7 @@ header {
 
 #exploreMenu{
   padding: 11px 24px;
+  min-width: 140px;
   background: var(--gold);
   color:var(--maroon-deep);
   border: none;
@@ -932,7 +935,8 @@ footer{
   margin-top: 6px;
   transition: all 0.2s ease;
   grid-column: 1 / -1;
-  align-self: flex-start;
+  min-width: 160px;
+  justify-self: center;
 }
 
 .form-group input::placeholder{
