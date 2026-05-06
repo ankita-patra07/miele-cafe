@@ -378,16 +378,24 @@ document.querySelector('.close-btn').addEventListener('click',()=>{
 
 //=======PLACE ORDER WORKING===========================
 const placeOrder = document.getElementById('placeOrder');
+const emptyCart = document.getElementById('emptyCart');
 document.querySelector('.checkout-btn').onclick = () => {
-  setTimeout(() => {
-    placeOrder.showModal();
-
+  if (cart.length === 0) {
     setTimeout(() => {
-      placeOrder.close();
-    },5000);
-  },500);
+      emptyCart.showModal();
+    }, 500);
+  } else {
+    setTimeout(() => {
+      placeOrder.showModal();
+
+      setTimeout(() => {
+        placeOrder.close();
+      }, 5000);
+    }, 500);
+  }
 };
-document.getElementById('closeBtn').onclick = () => dialog.close();
+document.getElementById('closeBtn').onclick = () => placeOrder.close();
+document.getElementById('emptyCartCloseBtn').onclick = () => emptyCart.close();
 
 //=============BOOK A TABLE===================
 const dialog = document.getElementById('bookTable');
