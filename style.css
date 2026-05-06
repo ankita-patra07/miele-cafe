@@ -1254,22 +1254,22 @@ footer{
 
   /* Responsive Sidepanel for Mobile */
   .sidePanel {
-    width: calc(100vw - 20px);
-    max-width: 100%;
-    height: 85vh;
-    top: 60px;
+    width: 85vw;
+    max-width: 380px;
+    height: 100vh;
+    top: 0;
     right: -100vw;
-    border-radius: 12px 12px 0 0;
+    border-radius: 0;
     z-index: 9999;
     position: fixed;
     transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.8);
-    border: 1px solid var(--border);
-    border-bottom: none;
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.8);
+    border: none;
+    border-left: 1px solid var(--border);
   }
 
   .sidePanel.active {
-    right: 10px;
+    right: 0;
   }
 
   .main-content.sidebar-open, .offerPanel.sidebar-open,
@@ -1278,8 +1278,8 @@ footer{
   }
 
   /* Blur effect for mobile when sidepanel is open */
-  main.sidebar-open {
-    filter: blur(1px);
+  .main-content.sidebar-open {
+    filter: blur(8px);
     pointer-events: none;
   }
 
@@ -1290,14 +1290,14 @@ footer{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 1999;
     pointer-events: all;
     cursor: pointer;
   }
 
   .cart-item {
-    max-height: calc(85vh - 200px);
+    max-height: calc(100vh - 200px);
   }
 }
 
