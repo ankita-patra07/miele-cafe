@@ -287,7 +287,6 @@ header {
   display: flex;
   gap: 14px;
   align-items: center;
-  justify-content: center;
 }
 #orderNow{
   padding: 10px 20px;

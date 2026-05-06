@@ -55,6 +55,11 @@
                 <div class="cart-total">Total: ₹<span id="totalPrice">0</span></div>
                 <button class="checkout-btn">Place Order</button>
             </div>
+            <dialog id="placeOrder">
+                <h5>Order Placed successfully!!</h5>
+                <p>Delivery Partner will reach out to you soon...</p>
+                <button id="closeBtn">Close</button>
+            </dialog>
         </div>
         <div class ="main-content">
             <section class="hero" id="hero">
@@ -144,7 +149,7 @@
                     </div>    
 
                     <!-- RESERVATION FORM -->
-                    <form class="reservation-form">
+                    <form class="reservation-form" id="reservation">
                     <div class="form-group">
                         <label for="name">Your name</label>
                         <input type="text" id="name" placeholder="Name">

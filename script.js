@@ -376,6 +376,19 @@ document.querySelector('.close-btn').addEventListener('click',()=>{
   document.querySelector('footer').classList.remove('sidebar-open');
 });
 
+//=======PLACE ORDER WORKING===========================
+const placeOrder = document.getElementById('placeOrder');
+document.querySelector('.checkout-btn').onclick = () => {
+  setTimeout(() => {
+    placeOrder.showModal();
+
+    setTimeout(() => {
+      placeOrder.close();
+    },5000);
+  },500);
+};
+document.getElementById('closeBtn').onclick = () => dialog.close();
+
 //=============BOOK A TABLE===================
 const dialog = document.getElementById('bookTable');
 document.querySelector('.form-submit').onclick = () => {
