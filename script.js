@@ -364,7 +364,7 @@ function showSidePanel(){
   document.querySelector('.offerPanel').classList.add('sidebar-open');
   document.querySelector('header').classList.add('sidebar-open');
   document.querySelector('footer').classList.add('sidebar-open');
-
+  document.querySelector('main').classList.add('sidebar-open');
 };
 
 //=====closebtn working===========
@@ -374,6 +374,7 @@ document.querySelector('.close-btn').addEventListener('click',()=>{
   document.querySelector('.offerPanel').classList.remove('sidebar-open');
   document.querySelector('header').classList.remove('sidebar-open');
   document.querySelector('footer').classList.remove('sidebar-open');
+  document.querySelector('main').classList.remove('sidebar-open');
 });
 
 //=======PLACE ORDER WORKING===========================

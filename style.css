@@ -1231,6 +1231,25 @@ footer{
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .Menu h1 { font-size: 32px; }
 
+  /* Horizontal Scroll for Menu Cards on Mobile */
+  .menu-row {
+    display: flex;
+    grid-template-columns: unset;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 12px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .menu-card {
+    min-width: 200px;
+    flex: 0 0 200px;
+    scroll-snap-align: start;
+  }
+
   /* Responsive Sidepanel for Mobile */
   .sidePanel {
     width: calc(100vw - 20px);
@@ -1239,11 +1258,17 @@ footer{
     top: 35px;
     right: 10px;
     border-radius: 12px;
+    z-index: 2000;
   }
 
   .main-content.sidebar-open, .offerPanel.sidebar-open,
   header.sidebar-open, footer.sidebar-open {
     margin-right: 0;
+  }
+
+  /* Blur effect for mobile when sidepanel is open */
+  main.sidebar-open {
+    filter: blur(5px);
   }
 
   .cart-item {
