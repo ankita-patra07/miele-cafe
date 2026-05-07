@@ -13,7 +13,32 @@
     <title>MieleCafe</title>
 </head>
 <body>
-     
+         <!-- LOADING SCREEN -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-container">
+            <div class="coffee-cup">
+                <div class="steam">
+                    <div class="steam-line"></div>
+                    <div class="steam-line"></div>
+                    <div class="steam-line"></div>
+                </div>
+                <div class="cup-body">
+                    <div class="coffee-fill"></div>
+                </div>
+                <div class="cup-handle"></div>
+            </div>
+ 
+            <h1 class="brand-name">Miele Cafe</h1>
+            <p class="tagline">Brewing Perfection</p>
+ 
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
     <div class="offerPanel">
         Fresh Roasts every morning • Signature Desserts after 6 pm
     </div>
@@ -262,5 +287,23 @@
     
 
     <script src="script.js"></script>
+    <script>
+        // Hide loading screen when page fully loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                loadingScreen.classList.add('hidden');
+            },5000);
+            
+        });
+ 
+        // Optional: Hide loading after 3 seconds (in case page takes too long to load)
+        setTimeout(() => {
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                loadingScreen.classList.add('hidden');
+            }
+        }, 6000);
+    </script>
 </body>
 </html>
