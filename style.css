@@ -1500,15 +1500,17 @@ footer{
     line-height: 1.6;
     margin-bottom: 20px;
     max-width: 100%;
+    display:block;
   }
 
   .btn-group {
     flex-direction: column;
     gap: 10px;
+    
   }
 
   .btn-group button {
-    width: 100%;
+    width: 70%;
     padding: 12px 20px;
     font-size: 12px;
   }
@@ -1865,6 +1867,8 @@ footer{
 
   .hero-content {
     padding: 0 16px;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .hero-est {
