@@ -415,3 +415,42 @@ document.querySelector('.form-submit').onclick = () => {
   }, 500);
 };
 document.getElementById('closeBtn').onclick = () => dialog.close();
+
+//========SIGN IN FEATURE=====================
+const signInDialog = document.getElementById('signIn');
+const signInBtn = document.getElementById('sign-in');
+const closeSignInBtn = document.getElementById('closeSignInBtn');
+const signInForm = document.getElementById('signInForm');
+
+// Open sign-in dialog
+signInBtn.addEventListener('click', () => {
+  signInDialog.showModal();
+});
+
+// Close sign-in dialog
+closeSignInBtn.addEventListener('click', () => {
+  signInDialog.close();
+});
+
+// Handle form submission
+signInForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = document.getElementById('signin-email').value;
+  const password = document.getElementById('signin-password').value;
+  
+  // Simple validation
+  if (email && password) {
+    console.log('Sign in:', { email, password });
+    // You can add actual sign-in logic here
+    alert('Sign in successful! Welcome back.');
+    signInForm.reset();
+    signInDialog.close();
+  }
+});
+
+// Close dialog when clicking outside (on backdrop)
+signInDialog.addEventListener('click', (e) => {
+  if (e.target === signInDialog) {
+    signInDialog.close();
+  }
+});

@@ -56,6 +56,23 @@
             <!-- SIGN IN -->
             <div class="btns">
                 <button id="sign-in">Sign In</button>
+                <dialog id="signIn">
+                    <div class="signin-header">
+                        <h2>Sign In</h2>
+                        <button type="button" class="close-signin-btn" id="closeSignInBtn">&times;</button>
+                    </div>
+                    <form class="signin-form" id="signInForm">
+                        <div class="form-group">
+                            <label for="signin-email">Email</label>
+                            <input type="email" id="signin-email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signin-password">Password</label>
+                            <input type="password" id="signin-password" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="signin-submit">Sign In</button>
+                    </form>
+                </dialog>
             </div>
             <!-- HAM AND SEARCH -->
             <div class="nav-actions">

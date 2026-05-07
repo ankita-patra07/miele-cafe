@@ -1262,6 +1262,108 @@ dialog button:hover {
   transform: translateY(-2px);
 }
 
+/* SIGN IN DIALOG */
+.signin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+
+.signin-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.close-signin-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.close-signin-btn:hover {
+  color: var(--text-main);
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.signin-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.signin-form .form-group label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+.signin-form .form-group input {
+  background-color: rgba(22, 0, 8, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 14px;
+  color: var(--text-main);
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.signin-form .form-group input::placeholder {
+  color: var(--text-faint);
+}
+
+.signin-form .form-group input:focus {
+  border-color: var(--border-hover);
+  background-color: rgba(22, 0, 8, 0.85);
+}
+
+.signin-submit {
+  background-color: var(--gold);
+  color: var(--maroon-deep);
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.signin-submit:hover {
+  background: var(--gold-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(228, 177, 82, 0.35);
+}
+
 /* Footer Section */
 footer{
   background-color: var(--maroon-deep);
