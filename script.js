@@ -454,3 +454,68 @@ signInDialog.addEventListener('click', (e) => {
     signInDialog.close();
   }
 });
+
+//========SIGN UP FEATURE=====================
+const signUpDialog = document.getElementById('signUp');
+const createAccountLink = document.getElementById('createAccountLink');
+const closeSignUpBtn = document.getElementById('closeSignUpBtn');
+const signUpForm = document.getElementById('signUpForm');
+const backToSignInLink = document.getElementById('backToSignInLink');
+
+// Open sign-up dialog from sign-in
+createAccountLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  signInDialog.close();
+  signUpDialog.showModal();
+});
+
+// Back to sign-in from sign-up
+backToSignInLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  signUpDialog.close();
+  signInDialog.showModal();
+});
+
+// Close sign-up dialog
+closeSignUpBtn.addEventListener('click', () => {
+  signUpDialog.close();
+});
+
+// Handle sign-up form submission
+signUpForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('signup-name').value;
+  const email = document.getElementById('signup-email').value;
+  const password = document.getElementById('signup-password').value;
+  const confirmPassword = document.getElementById('signup-confirm').value;
+  
+  // Validation
+  if (!name || !email || !password || !confirmPassword) {
+    alert('Please fill in all fields');
+    return;
+  }
+  
+  if (password !== confirmPassword) {
+    alert('Passwords do not match');
+    return;
+  }
+  
+  if (password.length < 6) {
+    alert('Password must be at least 6 characters');
+    return;
+  }
+  
+  console.log('Sign up:', { name, email, password });
+  // You can add actual sign-up logic here
+  alert('Account created successfully! You can now sign in.');
+  signUpForm.reset();
+  signUpDialog.close();
+  signInDialog.showModal();
+});
+
+// Close dialog when clicking outside (on backdrop)
+signUpDialog.addEventListener('click', (e) => {
+  if (e.target === signUpDialog) {
+    signUpDialog.close();
+  }
+});
