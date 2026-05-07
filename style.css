@@ -511,7 +511,7 @@ header {
   gap: 14px;
   align-items: center;
 }
-#orderNow{
+#bookTable{
   padding: 10px 20px;
   min-width: 140px;
   background: transparent;
@@ -542,7 +542,7 @@ header {
   transition: all 0.2s ease;
 }
 
-#orderNow:hover{
+#bookTable:hover{
   background: rgba(175, 141, 134, 0.12);
   border-color: var(--rose);
   transform: translateY(-2px);

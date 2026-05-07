@@ -257,6 +257,11 @@ document.getElementById('exploreMenu').addEventListener('click', () => {
   document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
 });
 
+// ── Book Table button scrolls to #reservation ───────
+document.getElementById('bookTable').addEventListener('click', () => {
+  document.getElementById('reservation').scrollIntoView({ behavior: 'smooth' });
+});
+
 //---------ADD TO CART FUNCTIONALITY--------
 
 // WE NEED A CART TO STORE THE PRODUCT INFO
@@ -398,7 +403,7 @@ document.getElementById('closeBtn').onclick = () => placeOrder.close();
 document.getElementById('emptyCartCloseBtn').onclick = () => emptyCart.close();
 
 //=============BOOK A TABLE===================
-const dialog = document.getElementById('bookTable');
+const dialog = document.getElementById('bookATable');
 document.querySelector('.form-submit').onclick = () => {
   // Wait 0.5 seconds (500 milliseconds) before showing dialog
   setTimeout(() => {
